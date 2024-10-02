@@ -118,7 +118,7 @@ const AllComicsPage = () => {
     .filter(comic => !typeComicFilter || comic.typecomic === typeComicFilter)
     .filter(comic => !languageFilter || comic.idioma === languageFilter)
     .map(comic => {
-      const comicCategories = comic.categoryname.split(',').map(cat => cat.trim().toLowerCase());
+      // const comicCategories = comic.categoryname.split(',').map(cat => cat.trim().toLowerCase());
       const categoryMatches = categoryFilter.filter(category => comicCategories.includes(category.toLowerCase())).length;
       return { ...comic, categoryMatches };
     })
@@ -172,7 +172,7 @@ const AllComicsPage = () => {
                     <p className={`${bebas.variable} text-center mt-4 text-lg font-bold uppercase`}>{comic.description}</p>
                   </div>
                 </div>
-                <div className="flex justify-between w-72 mt-2">
+                {/* <div className="flex justify-between w-72 mt-2">
                   <div className="p-2 text-lg font-bold text-rose-700 border border-rose-700 border-opacity-60 rounded-tl-lg rounded-br-lg uppercase">
                     {comic.typecomic}
                   </div>
@@ -180,7 +180,7 @@ const AllComicsPage = () => {
                     {comic.idioma}
                   </div>
                 </div>
-                <p className="text-lg text-gray-400">{comic.categoryname}</p>
+                <p className="text-lg text-gray-400">{comic.categoryname}</p> */}
                 <h1 className={`${bebas.variable} font-sans text-3xl font-bold mt-2 w-72 text-center text-yellow-400 `}>{comic.title}</h1>
                 <p className={`${bebas.variable} font-sans text-2xl text-white`}>{comic.author}</p>
                 <p className={`${bebas.variable} text-lg font-bold uppercase text-rose-700`}>{comic.data_post}</p>
